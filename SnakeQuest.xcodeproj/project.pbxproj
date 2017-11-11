@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		869EA0641FB74434002A4A15 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 869EA0631FB74434002A4A15 /* main.cpp */; };
+		869EA06D1FB74469002A4A15 /* SDL2_ttf.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 869EA06B1FB74469002A4A15 /* SDL2_ttf.framework */; };
+		869EA06E1FB74469002A4A15 /* SDL2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 869EA06C1FB74469002A4A15 /* SDL2.framework */; };
+		869EA0711FB74526002A4A15 /* GraphicsLibrary.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 869EA06F1FB74526002A4A15 /* GraphicsLibrary.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +28,10 @@
 /* Begin PBXFileReference section */
 		869EA0601FB74434002A4A15 /* SnakeQuest */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = SnakeQuest; sourceTree = BUILT_PRODUCTS_DIR; };
 		869EA0631FB74434002A4A15 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		869EA06B1FB74469002A4A15 /* SDL2_ttf.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2_ttf.framework; path = ../../../../Library/Frameworks/SDL2_ttf.framework; sourceTree = "<group>"; };
+		869EA06C1FB74469002A4A15 /* SDL2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2.framework; path = ../../../../Library/Frameworks/SDL2.framework; sourceTree = "<group>"; };
+		869EA06F1FB74526002A4A15 /* GraphicsLibrary.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = GraphicsLibrary.cpp; sourceTree = "<group>"; };
+		869EA0701FB74526002A4A15 /* GraphicsLibrary.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = GraphicsLibrary.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +39,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				869EA06D1FB74469002A4A15 /* SDL2_ttf.framework in Frameworks */,
+				869EA06E1FB74469002A4A15 /* SDL2.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -43,6 +52,7 @@
 			children = (
 				869EA0621FB74434002A4A15 /* SnakeQuest */,
 				869EA0611FB74434002A4A15 /* Products */,
+				869EA06A1FB74468002A4A15 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,8 +68,19 @@
 			isa = PBXGroup;
 			children = (
 				869EA0631FB74434002A4A15 /* main.cpp */,
+				869EA06F1FB74526002A4A15 /* GraphicsLibrary.cpp */,
+				869EA0701FB74526002A4A15 /* GraphicsLibrary.hpp */,
 			);
 			path = SnakeQuest;
+			sourceTree = "<group>";
+		};
+		869EA06A1FB74468002A4A15 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				869EA06B1FB74469002A4A15 /* SDL2_ttf.framework */,
+				869EA06C1FB74469002A4A15 /* SDL2.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -119,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				869EA0711FB74526002A4A15 /* GraphicsLibrary.cpp in Sources */,
 				869EA0641FB74434002A4A15 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -233,6 +255,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(LOCAL_LIBRARY_DIR)/Frameworks",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -241,6 +267,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(LOCAL_LIBRARY_DIR)/Frameworks",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
